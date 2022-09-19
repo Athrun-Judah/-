@@ -31,10 +31,12 @@ const matrix = (a, b = a) => {
 const Fib = (n) => {
     let a = [[1,0],[0,0]]
     let b = [[1,1],[1,0]]
-    if(n<1) return 1
+    if(n===0) return 0
+    if(n<2) return 1
     return matrix(a , fn(b, n-1))[0][0]
 }
 
+console.log(Fib(0)) //0
 console.log(Fib(1)) //1
 console.log(Fib(2)) //1
 console.log(Fib(3)) //2
